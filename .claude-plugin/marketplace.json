@@ -1,0 +1,11 @@
+{
+  "name": "nicknotknack",
+  "owner": { "name": "nicknotknack" },
+  "plugins": [
+    {
+      "name": "ghostty-tab-status",
+      "source": "./",
+      "description": "Emoji status of each Claude Code agent in the terminal tab title: 🟠 working, 🔴 waiting for you, 🟢 done"
+    }
+  ]
+}

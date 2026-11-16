@@ -1,0 +1,20 @@
+{
+  "description": "Emoji status in the terminal tab title: 🟠 working, 🔴 waiting for you, 🟢 done",
+  "hooks": {
+    "SessionStart":       [{ "hooks": [{ "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/tab.sh\" start" }] }],
+    "UserPromptSubmit":   [{ "hooks": [{ "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/tab.sh\" working" }] }],
+    "PreToolUse":         [{ "matcher": "AskUserQuestion",
+                             "hooks": [{ "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/tab.sh\" waiting" }] }],
+    "PostToolUse":        [{ "hooks": [{ "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/tab.sh\" working" }] }],
+    "PostToolUseFailure": [{ "hooks": [{ "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/tab.sh\" working" }] }],
+    "PermissionRequest":  [{ "hooks": [{ "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/tab.sh\" waiting" }] }],
+    "PermissionDenied":   [{ "hooks": [{ "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/tab.sh\" working" }] }],
+    "Elicitation":        [{ "hooks": [{ "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/tab.sh\" waiting" }] }],
+    "ElicitationResult":  [{ "hooks": [{ "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/tab.sh\" working" }] }],
+    "Notification":       [{ "matcher": "permission_prompt|elicitation_dialog|elicitation_url_dialog",
+                             "hooks": [{ "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/tab.sh\" waiting" }] }],
+    "Stop":               [{ "hooks": [{ "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/tab.sh\" done" }] }],
+    "StopFailure":        [{ "hooks": [{ "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/tab.sh\" error" }] }],
+    "SessionEnd":         [{ "hooks": [{ "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/tab.sh\" reset" }] }]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "ghostty-tab-status",
+  "version": "0.2.0",
+  "description": "Emoji status of each Claude Code agent in the terminal tab title: 🟠 working, 🔴 waiting for you, 🟢 done",
+  "author": { "name": "nicknotknack" },
+  "repository": "https://github.com/nicknotknack/claude-tab-status-for-ghosty",
+  "license": "MIT",
+  "keywords": ["ghostty", "terminal", "tabs", "status", "hooks"]
+}
