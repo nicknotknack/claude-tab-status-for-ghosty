@@ -1,8 +1,6 @@
-# Claude Code tab status for Ghostty
-
-A Claude Code plugin that shows each agent's status in the Ghostty terminal tab title, so you can manage many parallel Claude Code sessions at a glance.
-
 ![Claude Code agent status in Ghostty tabs](https://raw.githubusercontent.com/nicknotknack/claude-tab-status-for-ghosty/assets/preview.png)
+
+plugin that shows agent's status in the Ghostty terminal tab title.
 
 🟠 working · 🔴 waiting for you · 🟢 done · ❌ error
 
