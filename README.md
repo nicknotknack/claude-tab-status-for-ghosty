@@ -1,6 +1,6 @@
 # Claude Code tabs status for Ghosty terminal
 
-![Claude Code agent status in Ghostty tabs](https://raw.githubusercontent.com/nicknotknack/claude-tab-status-for-ghosty/assets/tabs.png)
+![Claude Code agent status in Ghostty tabs](https://raw.githubusercontent.com/nicknotknack/claude-tab-status-for-ghosty/assets/tabs-v3.png)
 
 plugin that shows agent's status in the Ghostty terminal tab title.
 
