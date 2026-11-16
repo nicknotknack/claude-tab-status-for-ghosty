@@ -104,7 +104,7 @@ fi
 
 msg=""
 if [ "$state" = start ] && [ "${CLAUDE_CODE_DISABLE_TERMINAL_TITLE:-}" != 1 ]; then
-  msg="ghostty-tab-status: Claude Code перезаписывает заголовок вкладки. Запусти /ghostty-tab-status:setup и перезапусти claude."
+  msg="ghostty-tab-status: set CLAUDE_CODE_DISABLE_TERMINAL_TITLE=1 (see README) and restart claude, or Claude Code will overwrite the tab title."
 fi
 
 printf '{"terminalSequence":"%s"' "$(json_escape "$seq")"
